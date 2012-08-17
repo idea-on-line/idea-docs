@@ -1,0 +1,66 @@
+%%%
+%%% Simple Report
+%%%
+%%% *document class:* article, a4paper, 11pt
+%%% *language:* english
+%%% *contains:* titlepage, table of contents
+%%% *special:* enable code line numbers
+%%%
+
+% using article default size
+\documentclass[a4paper,11pt,titlepage,openright]{article}
+\usepackage{a4wide}
+
+% textile required packages
+\usepackage{listings}
+\usepackage[normalem]{ulem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{tabulary}
+\usepackage{pbox}
+\usepackage{lastpage}
+
+% Use fancyhdr
+\pagestyle{fancy}
+       
+% enable code line numbers
+\lstset{numbers=left}
+
+% set default image resolution to 600 DPI
+\pdfimageresolution 300
+
+% titlepage macros
+\title{}
+\author{}
+\date{\today}
+
+% initialize makeindex
+\makeindex{}
+
+\begin{document}
+  
+  \begin{titlepage}
+	\begin{center}
+	\rule{\textwidth}{1pt}\par 
+	\vspace{1\baselineskip}
+	{\huge\bfseries Report }\\[0.5\baselineskip]
+	\rule{\textwidth}{1pt}\par
+	\end{center}
+  \end{titlepage}
+
+  % table of contents
+  \tableofcontents
+  \newpage
+
+  % input
+  \input{document.tex}
+  
+\end{document}
