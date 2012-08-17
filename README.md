@@ -10,19 +10,27 @@ The software is distributed under the GNU Affero General Public License, Version
 
 1. Clone the repository inside **redmine plugin** folder with:
  
+    ```
     redmine/plugins# git clone https://github.com/idea-on-line/idea-docs.git
+    ```
 
 2. Install RedCloth4
 
+    ```
     redmine# gem install RedCloth
+    ```
 
 3. Install texlive
 
+    ```
     redmine# apt-get install texlive
+    ```
 
 4. Inside **redmine** folder
 
+    ```
     redmine# bundle install
     redmine# rake redmine:plugins:migrate RAILS_ENV=production
+    ```
 
 5. Restart **redmine**.
